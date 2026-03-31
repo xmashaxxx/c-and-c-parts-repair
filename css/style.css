@@ -605,6 +605,22 @@ nav.scrolled {
 .svc-card:hover .svc-link { opacity: 1; transform: translateX(0); }
 .svc-link svg { width: 14px; height: 14px; }
 
+/* Compact service tiles (home page) */
+a.svc-card { text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.svc-card--compact { padding: 2rem 1.5rem; }
+.svc-card--compact .svc-icon { margin-bottom: 1rem; }
+.svc-card--compact h3 { font-size: 0.95rem; margin-bottom: 0; }
+.svc-arrow {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-size: 1rem;
+  color: var(--gold);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.svc-card--compact:hover .svc-arrow { opacity: 1; transform: translateX(0); }
+
 /* ============================================
    ENGINE ANIMATION SECTION
    ============================================ */
