@@ -605,26 +605,46 @@ nav.scrolled {
 .svc-card:hover .svc-link { opacity: 1; transform: translateX(0); }
 .svc-link svg { width: 14px; height: 14px; }
 
-/* Compact service tiles (home page) */
-a.svc-card { text-decoration: none; color: inherit; }
-.svc-card--compact {
+/* Service list (home page) */
+.svc-list {
+  border: 1px solid var(--border-gold);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.svc-row {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 1.25rem;
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.75rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-gold);
+  transition: background 0.25s var(--ease), padding-left 0.25s var(--ease);
 }
-.svc-card--compact .svc-icon { flex-shrink: 0; margin-bottom: 0; width: 36px; height: 36px; }
-.svc-card--compact h3 { font-size: 1rem; margin-bottom: 0; flex: 1; }
-.svc-arrow {
+.svc-row:last-child { border-bottom: none; }
+.svc-row:hover { background: #191919; padding-left: 2.25rem; }
+.svc-row-icon {
   flex-shrink: 0;
-  font-size: 1.1rem;
+  width: 28px; height: 28px;
+  color: var(--gold);
+}
+.svc-row-name {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.svc-row-arrow {
+  flex-shrink: 0;
+  font-size: 1rem;
   color: var(--gold);
   opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  transform: translateX(-4px);
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
 }
-.svc-card--compact:hover .svc-arrow { opacity: 1; transform: translateX(0); }
+.svc-row:hover .svc-row-arrow { opacity: 1; transform: translateX(0); }
 
 /* ============================================
    ENGINE ANIMATION SECTION
